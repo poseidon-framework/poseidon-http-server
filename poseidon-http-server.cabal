@@ -4,16 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: eeeb72f88b298d5a458424c83fbd19694ebb14e44e32fc11ea753c87723d9998
+-- hash: 97ff38a5833e41aad82e47bc10d1485adad7c975035fa19f28144caa4c2dc9fd
 
 name:           poseidon-http-server
-version:        0.1.0.0
+version:        0.0.1
 description:    Please see the README on GitHub at <https://github.com/githubuser/poseidon-http-server#readme>
 homepage:       https://github.com/githubuser/poseidon-http-server#readme
 bug-reports:    https://github.com/githubuser/poseidon-http-server/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2021 Author name here
+author:         Stephan Schiffels
+maintainer:     stephan_schiffels@eva.mpg.de
+copyright:      2021 Stephan Schiffels
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -25,38 +25,13 @@ source-repository head
   type: git
   location: https://github.com/githubuser/poseidon-http-server
 
-library
-  exposed-modules:
-      Lib
-  other-modules:
-      Paths_poseidon_http_server
-  hs-source-dirs:
-      src
-  build-depends:
-      base >=4.7 && <5
-  default-language: Haskell2010
-
-executable poseidon-http-server-exe
+executable poseidon-http-server
   main-is: Main.hs
   other-modules:
       Paths_poseidon_http_server
   hs-source-dirs:
-      app
+      src
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , poseidon-http-server
-  default-language: Haskell2010
-
-test-suite poseidon-http-server-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_poseidon_http_server
-  hs-source-dirs:
-      test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , poseidon-http-server
   default-language: Haskell2010
