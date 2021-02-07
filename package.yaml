@@ -12,8 +12,6 @@ extra-source-files:
 
 description:         Please see the README on GitHub at <https://github.com/githubuser/poseidon-http-server#readme>
 
-dependencies:
-- base >= 4.7 && < 5
 
 executables:
   poseidon-http-server:
@@ -23,3 +21,11 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    dependencies:
+    - base >= 4.7 && < 5
+    - optparse-applicative
+    - scotty
+    other-modules:
+    - Paths_poseidon_http_server
+
+
